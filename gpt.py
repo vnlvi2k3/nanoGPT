@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import tqdm
 
 #hyperparameters
 batch_size = 64 # how many independent sequences will we process in parallel?
@@ -192,7 +193,7 @@ def estimate_loss():
     return out
 
 
-for iter in range(max_iters):
+for iter in tqdm(range(max_iters)):
 
     if iter % eval_interval == 0:
         losses = estimate_loss()
