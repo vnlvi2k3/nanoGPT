@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import tqdm
+from tqdm import tqdm
 
 #hyperparameters
 batch_size = 64 # how many independent sequences will we process in parallel?
