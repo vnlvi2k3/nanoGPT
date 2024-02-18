@@ -207,3 +207,4 @@ for iter in tqdm(range(max_iters)):
 
 context = torch.zeros((1,1), dtype=torch.long, device=device)
 print(decode(model.generate(context, max_new_tokens=1000)[0].tolist()))
+open('more.txt', 'w').write(decode(model.generate(context, max_new_tokens=10000)[0].tolist()))
